@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>من الجاسوس؟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Web App iOS / Android -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#00c853">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 30px 15px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 2em;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      width: 80px;
+      border-radius: 5px;
+      border: 1px solid #555;
+      background-color: #2e2e2e;
+      color: #fff;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    #setup {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000000aa;
+      display: inline-block;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    button {
+      background-color: #00c853;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      margin-top: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00e676;
+    }
+
+    #game {
+      margin-top: 30px;
+      background-color: #1e1e1e;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000000aa;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    #wordDisplay {
+      font-size: 24px;
+      margin-bottom: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: scale(0.9);}
+      100% {opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎭 من هو الجاسوس؟</h1>
+
+  <div id="setup">
+    <div>
+      <label for="playerCount">عدد اللاعبين:</label>
+      <input type="number" id="playerCount" min="3" max="20" value="5">
+    </div>
+    <div>
+      <label for="spyCount">عدد الجواسيس:</label>
+      <input type="number" id="spyCount" min="1" value="1">
+    </div>
+    <button onclick="startGame()">ابدأ اللعبة</button>
+  </div>
+
+  <div id="game" style="display:none;">
+    <div id="wordDisplay">...</div>
+    <button id="nextBtn" onclick="showNextPlayer()">التالي</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

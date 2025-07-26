@@ -1,0 +1,16 @@
+{
+    "name": "من هو الجاسوس؟",
+    "short_name": "الجاسوس",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#00c853",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  
