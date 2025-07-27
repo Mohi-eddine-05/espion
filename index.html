@@ -106,12 +106,18 @@
   </div>
 
   <div id="game" style="display:none;">
-    <div id="wordDisplay">...</div>
-    <button id="nextBtn" onclick="showNextPlayer()">التالي</button>
-    <button id="restartBtn" onclick="restartGame()" style="margin-top: 10px; display: none;">
-        🔁 إعادة اللعب
-      </button>
-  </div>
+  <div id="wordDisplay">...</div>
+  <button id="nextBtn" onclick="showNextPlayer()">التالي</button>
+  <button id="restartBtn" onclick="restartGame()" style="display:none; margin-top: 15px;">🔁 إعادة اللعبة</button>
+
+</div>
+
+<div id="transitionScreen" style="display:none;">
+  <p style="font-size: 20px;">👀 أعطِ الهاتف للاعب التالي</p>
+  <button onclick="revealWord()">🎮 اضغط لعرض الكلمة</button>
+  
+</div>
+
 
 
   <script src="data.js"></script>
